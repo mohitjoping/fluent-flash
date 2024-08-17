@@ -1,2 +1,2 @@
-# fluent-flash
-Master your English vocabulary with flashcards.
+# FluentFlash
+FluentFlash is a web application designed to help users improve their English vocabulary through AI-generated flashcards. The application provides an interactive learning experience, offering features such as pronunciation, example sentences, and the ability to download flashcard collections as PDFs. Users can also access premium features by subscribing to a Pro plan via Stripe.
