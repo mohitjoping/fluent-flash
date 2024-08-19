@@ -1,16 +1,18 @@
 "use client"; // Ensure this line is at the top
 
+import Link from 'next/link';
 import React, { useState } from 'react';
-
+import { currentUser } from '@clerk/nextjs/server'
 
 type Props = {}
 
 export default function Navbar({}: Props) {
   const [isOpen, setIsOpen] = useState(false);
-
+  const user = currentUser()
+  // !user
   return (
     <>
-      <section className='w-full h-[8vh] mt-3 flex flex-1 gap-4 bg-white text-black justify-between items-center px-10 '>
+      <section className='w-full h-[8vh]  flex flex-1 gap-4 bg-white text-black justify-between items-center px-10 '>
       <div className="Fluentflash text-blue-900 text-5xl font-extrabold font-['Inter']">FluentFlash</div>
         
         <div className='hidden md:flex flex-row gap-4'>
@@ -22,12 +24,18 @@ export default function Navbar({}: Props) {
         </div>
         
         <div className='flex items-center gap-4 '>
+        <Link href="/sign-up">
         <button className="mx-auto w-30 h-10 py-1 px-2.5 rounded-md border-2 border-[#323232] bg-[#fff] shadow-[4px_4px_0_#000000] text-lg font-semibold text-[#323232] cursor-pointer active:shadow-none active:translate-x-[3px] active:translate-y-[3px]">
-          login
-        </button>{" "}
+          Signin
+        </button>
+        </Link>
+        
+        {" "}
+          <Link href="/sign-up">
           <button className="mx-auto w-30 h-10 py-1 px-2.5 rounded-md border-2 border-[#323232] bg-[#fff] shadow-[4px_4px_0_#000000] text-lg font-semibold text-[#323232] cursor-pointer active:shadow-none active:translate-x-[3px] active:translate-y-[3px]">
             sign up
           </button>
+          </Link>
 
           {/* Hamburger Icon */}
           <div className='md:hidden'>

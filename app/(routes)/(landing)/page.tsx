@@ -3,17 +3,14 @@ import FAQ from "@/components/faq";
 import Feature from "@/components/feature";
 import Footer from "@/components/footer";
 import Herosection from "@/components/herosection";
-import Navbar from "@/components/navbar";
 import Pricing from "@/components/pricing";
-import Signin from "@/components/signin";
-import Signup from "@/components/signup";
-import Link from "next/link";
+
 
 
 export default function Landing() {
   return (
     <main className='bg-blue-900 '>
-      <Navbar />
+
       <Herosection />
       {/* <Signin />
       <Signup /> */}
